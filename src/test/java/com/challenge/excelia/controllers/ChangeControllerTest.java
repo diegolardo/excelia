@@ -63,8 +63,7 @@ public class ChangeControllerTest {
     public void validateSortedNumbersWhenInputIsWrongThenThrow() throws Exception {
         //Arrange
         //Act & Assert
-        //Assertions.assertThrows(ServletException.class, () ->
-                mockMvc
+           mockMvc
                 .perform(MockMvcRequestBuilders.post("/api/challenge/getSortedNumbers")
                         .contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(requestDTO)))
                 .andExpect(status().isBadRequest())
